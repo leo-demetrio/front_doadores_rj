@@ -1,6 +1,7 @@
 <template>
 <section class="margin-result tabe-contenet">
     <h1>Institutos</h1> 
+    <h1 v-if="key">{{error}}</h1>
     <h2>{{representative.name}}</h2> 
     <div v-for="(institut, index) in instituts" :key="index" class="tab-pane-item">
         <h1>{{institut.name}}</h1>
@@ -25,6 +26,7 @@ export default {
            instituts: [],
            institutId: '',
            representative: '',
+           error: '',
        } 
     },
     mounted() {   
@@ -32,6 +34,9 @@ export default {
          .then((response) => {
              this.instituts = response.data;
              console.log(this.instituts)                         
+       }).catch((error) => {
+           this.error = error;
+           console.log(error)
        }); 
     },
     methods: {
