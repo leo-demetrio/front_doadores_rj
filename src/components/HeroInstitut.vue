@@ -34,10 +34,11 @@ export default {
          .then((response) => {
              this.instituts = response.data;
              console.log(this.instituts)                         
-       }).catch((error,message) => {
-           console.log('Erro chegou',message);
+       }).catch((error) => {
+           console.log('Erro chegou');
            this.error = error;
-           console.log(error.message)
+           console.log(error.message);
+           console.log(error);
        }); 
     },
     methods: {
