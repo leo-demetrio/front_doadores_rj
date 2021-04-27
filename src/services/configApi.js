@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export const http = axios.create({
-    //baseURL: 'https://doadores-rj.herokuapp.com/',
-    baseURL: 'http://localhost:3000/',
+    baseURL: 'https://doadores-rj.herokuapp.com/',
+    //baseURL: 'http://localhost:3000/',
     // headers: {
     //     'Content-Type': 'application/json;charset=UTF-8',
     //     'Access-Control-Allow-Origin': '*',
