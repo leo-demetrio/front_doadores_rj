@@ -34,9 +34,10 @@ export default {
          .then((response) => {
              this.instituts = response.data;
              console.log(this.instituts)                         
-       }).catch((error) => {
+       }).catch((error,message) => {
+           console.log('Erro chegou',message);
            this.error = error;
-           console.log(error)
+           console.log(error.message)
        }); 
     },
     methods: {
