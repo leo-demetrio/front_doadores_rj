@@ -37,7 +37,7 @@ export default {
        }).catch((error) => {
            console.log('Erro chegou');
            this.error = error;
-           console.log(error.message);
+           console.log(error.response);
            console.log(error);
        }); 
     },
